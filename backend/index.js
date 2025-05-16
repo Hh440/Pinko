@@ -4,7 +4,6 @@ const cors = require("cors")
 
 const outcomes=require("./outcome")
 
-console.log("Outcome:",outcomes)
 const app= express()
 //app.use(express.json())
 app.use(cors())
