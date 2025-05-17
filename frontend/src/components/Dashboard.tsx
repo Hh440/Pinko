@@ -3,7 +3,7 @@ import { Gamepad2, LineChart, Coins, Trophy, ChevronRight } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Card, CardContent } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
 export const DashBoard=()=> {
 
