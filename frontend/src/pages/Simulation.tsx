@@ -66,13 +66,21 @@ export const Simulaltion=()=>{
 
     
     return(
-       <div style={{display: "flex"}}>
-            <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", minHeight: "100vh"}}>
-                {JSON.stringify(outputs, null, 2)}
-            </div>
-            <div style={{display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", minHeight: "100vh"}}>
-                <canvas ref={canvasRef}  width="800" height="800"></canvas>
-            </div>
-        </div>
+      <div className="grid grid-cols-2 h-screen overflow-hidden">
+  {/* Left: Scrollable outputs */}
+  <div className="overflow-y-auto h-screen bg-[#464033] text-white  px-4 py-6 hide-scrollbar">
+    <pre className="whitespace-pre-wrap break-words">
+      {JSON.stringify(outputs, null, 2)}
+    </pre>
+  </div>
+
+  {/* Right: Fixed Canvas */}
+  <div className="relative h-screen">
+    <div className="fixed right-0 top-0 h-screen w-1/2 flex  justify-center bg-[#7e7c73]">
+      <canvas ref={canvasRef} width="800" height="800" />
+    </div>
+  </div>
+</div>
+
     )
 }

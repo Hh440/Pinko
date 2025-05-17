@@ -17,7 +17,7 @@ export const Game=()=>{
   }, [canvasRef]);
 
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center">
+    <div className="flex flex-col lg:flex-row items-center justify-center pt-20 ">
       <canvas ref={canvasRef} width="800" height="800"></canvas>
       <Button
         className="px-10 mb-4"
